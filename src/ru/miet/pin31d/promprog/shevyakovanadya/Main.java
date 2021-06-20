@@ -48,12 +48,31 @@ class Cube {
         return sideCube1;
     }
     //Формула для нахождения объема куба
-    public double perimeterCube(double xC){
+    public double vCube(double xC){
         sideCube2 = xC*xC*xC;
         return sideCube2;
     }
     public void viewResultCube(){
         System.out.println("Площадь куба: "+sideCube1);
         System.out.println("Периметра куба: "+sideCube2);
+    }
+}
+
+class Sphere {
+    public double sideSphere1, sideSphere2;
+    public Sphere(){}
+    //Формула для нахождения площади поверхности
+    public double areaSphere(double xS){
+        sideSphere1 = 4*Math.PI*xS*xS;
+        return sideSphere1;
+    }
+    //Формула для нахождения объема сферы
+    public double vSphere(double xS){
+        sideSphere2 = (4*Math.PI*xS*xS)/3;
+        return sideSphere2;
+    }
+    public void viewResultSphere(){
+        System.out.println("Площадь сферы: "+sideSphere1);
+        System.out.println("Объем сферы: "+sideSphere2);
     }
 }
