@@ -43,7 +43,7 @@ class Cube {
     public double sideCube1, sideCube2;
     public Cube(){}
     //Формула для нахождения площади
-    public double areaSquare(double xC){
+    public double areaCube(double xC){
         sideCube1 = 6*xC*xC;
         return sideCube1;
     }
@@ -74,5 +74,55 @@ class Sphere {
     public void viewResultSphere(){
         System.out.println("Площадь сферы: "+sideSphere1);
         System.out.println("Объем сферы: "+sideSphere2);
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+        Rectangle rec = new Rectangle();
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Введите длину прямоугольника: ");
+        double num1 = in.nextDouble();
+        System.out.println("Введите ширину прямоугольника: ");
+        double num2 = in.nextDouble();
+
+        rec.perimeterCalculator(num1,num2);
+        rec.areaCalculator(num1,num2);
+
+        rec.viewResult();
+
+        Square recS = new Square();
+        Scanner n = new Scanner(System.in);
+
+        System.out.println("Введите длину квадрата: ");
+        double x = in.nextDouble();
+
+
+        recS.perimeterSquare(x);
+        recS.areaSquare(x);
+
+        recS.viewResultSquare();
+
+        Cube recC = new Cube();
+        Scanner nc = new Scanner(System.in);
+
+        System.out.println("Введите длину куба: ");
+        double xC = in.nextDouble();
+        recC.areaCube(xC);
+        recC.vCube(xC);
+
+        recC.viewResultCube();
+
+        Sphere recSp = new Sphere();
+        Scanner ns = new Scanner(System.in);
+
+        System.out.println("Введите длину радиуса: ");
+        double xS = in.nextDouble();
+        recSp.areaSphere(xS);
+        recSp.vSphere(xS);
+
+        recSp.viewResultSphere();
     }
 }
