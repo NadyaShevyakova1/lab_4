@@ -28,7 +28,7 @@ class Square {
         sideSquare1 = (x*x);
         return sideSquare1;
     }
-    //Формула для нахождения периметра прямоугольника
+    //Формула для нахождения периметра квадрата
     public double perimeterSquare(double x){
         sideSquare2 = (x+x)*2;
         return sideSquare2;
@@ -39,3 +39,21 @@ class Square {
     }
 }
 
+class Cube {
+    public double sideCube1, sideCube2;
+    public Cube(){}
+    //Формула для нахождения площади
+    public double areaSquare(double xC){
+        sideCube1 = 6*xC*xC;
+        return sideCube1;
+    }
+    //Формула для нахождения объема куба
+    public double perimeterCube(double xC){
+        sideCube2 = xC*xC*xC;
+        return sideCube2;
+    }
+    public void viewResultCube(){
+        System.out.println("Площадь куба: "+sideCube1);
+        System.out.println("Периметра куба: "+sideCube2);
+    }
+}
